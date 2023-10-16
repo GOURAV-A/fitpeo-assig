@@ -123,7 +123,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/earning.webp" alt="earnings" />
+                    <img src="public/earning.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Earning</div>
@@ -137,7 +137,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/orders.webp" alt="earnings" />
+                    <img src="public/orders.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Orders</div>
@@ -151,7 +151,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/recharge.png" alt="earnings" />
+                    <img src="public/recharge.png" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Balance</div>
@@ -165,7 +165,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/sales.webp" alt="earnings" />
+                    <img src="public/sales.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Total Sales</div>
