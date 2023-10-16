@@ -9,7 +9,7 @@ import {
 import { Layout, Menu, theme, Input, Row, Col, Card, Table } from "antd";
 import "./app.scss";
 import DonutChartComponent from "./DonutChartComponent";
-import BarChartComponent from "./BarChartcomponent";
+import BarChartComponent from "./BarChartComponent";
 
 const { Header, Content, Sider } = Layout;
 const { Search } = Input;
