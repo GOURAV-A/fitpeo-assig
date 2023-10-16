@@ -9,7 +9,7 @@ import {
 import { Layout, Menu, theme, Input, Row, Col, Card, Table } from "antd";
 import "./app.scss";
 import DonutChartComponent from "./DonutChartComponent";
-import BarChartComponent from "./BarChartComponent";
+import BarChartComponent from "./BarChartComponent"; 
 
 const { Header, Content, Sider } = Layout;
 const { Search } = Input;
@@ -102,7 +102,7 @@ const App = () => {
           }}
         >
           <Header>
-            <div className="header_name">Hello Shahrukh ,</div>
+            <div className="header_name">Hello fitpeo ,</div>
             <Search
               placeholder="search"
               style={{
@@ -137,7 +137,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/orders.webp" alt="earnings" />
+                    <img src="public/orders.webp" alt="order" />
                   </div>
                   <div className="info">
                     <div className="head">Orders</div>
@@ -151,7 +151,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/recharge.png" alt="earnings" />
+                    <img src="public/recharge.png" alt="balance" />
                   </div>
                   <div className="info">
                     <div className="head">Balance</div>
@@ -165,7 +165,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/sales.webp" alt="earnings" />
+                    <img src="public/sales.webp" alt="sales" />
                   </div>
                   <div className="info">
                     <div className="head">Total Sales</div>
@@ -182,7 +182,7 @@ const App = () => {
                 <Card className="barChart" bordered={false}>
                   <div className="head">Overview</div>
                   <div className="info">Monthly Earning</div>
-                  <BarChartComponent/>
+                  <BarChartComponent />
                 </Card>
               </Col>
               <Col span={8}>
