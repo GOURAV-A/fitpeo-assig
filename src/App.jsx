@@ -123,7 +123,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/earning.png" alt="earnings" />
+                    <img src="public/assets/earning.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Earning</div>
@@ -137,7 +137,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/orders.png" alt="earnings" />
+                    <img src="public/assets/orders.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Orders</div>
@@ -165,7 +165,7 @@ const App = () => {
               <Col span={6}>
                 <Card className="card" bordered={false}>
                   <div className="image">
-                    <img src="public/assets/sales.png" alt="earnings" />
+                    <img src="public/assets/sales.webp" alt="earnings" />
                   </div>
                   <div className="info">
                     <div className="head">Total Sales</div>
