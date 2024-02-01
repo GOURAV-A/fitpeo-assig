@@ -131,6 +131,7 @@ const App = () => {
                     <div className="percent">
                       <span className="green">37.8%</span> this month
                     </div>
+                    
                   </div>
                 </Card>
               </Col>
