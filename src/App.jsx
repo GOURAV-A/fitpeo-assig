@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   FileOutlined,
@@ -6,11 +7,16 @@ import {
   UserOutlined,
   SettingFilled,
 } from "@ant-design/icons";
-import { Layout, Menu, theme, Input, Row, Col, Card, Table } from "antd";
+import { Layout, Menu, theme, Input, Row, Col, Card, Table, Button, Modal } from "antd";
 import "./app.scss";
 import DonutChartComponent from "./DonutChartComponent";
-import BarChartComponent from "./BarChartComponent"; 
-
+import BarChartComponent from "./BarChartComponent";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import ModalForm from "./ModalForm";
+ 
+ 
+ 
+ 
 const { Header, Content, Sider } = Layout;
 const { Search } = Input;
 function getItem(label, key, icon, children) {
@@ -21,7 +27,7 @@ function getItem(label, key, icon, children) {
     label,
   };
 }
-
+ 
 const items = [
   getItem("Dashboard", "1", <PieChartOutlined />),
   getItem("Product", "sub1", <UserOutlined />, [
@@ -36,10 +42,24 @@ const items = [
   getItem("Help", "9", <FileOutlined />),
 ];
 const App = () => {
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+ 
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+ 
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+ 
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+ 
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
+ 
   const columns = [
     {
       title: "Product name",
@@ -62,7 +82,7 @@ const App = () => {
       key: "sales",
     },
   ];
-
+ 
   const dataSource = [
     {
       key: "1",
@@ -79,7 +99,7 @@ const App = () => {
       number: "20",
     },
   ];
-
+ 
   return (
     <Layout>
       <Layout>
@@ -96,20 +116,34 @@ const App = () => {
             items={items}
           />
         </Sider>
+ 
         <Layout
           style={{
             padding: "0 24px 24px",
           }}
         >
           <Header>
-            <div className="header_name">Hello fitpeo ,</div>
+            <div className="header_name">Hello fitpeo,</div>
             <Search
               placeholder="search"
               style={{
                 width: 200,
               }}
             />
+            <Button type="primary" onClick={showModal}>
+              Modal
+            </Button>
           </Header>
+ 
+          <Modal
+            title="Form "
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <ModalForm />
+          </Modal>
+ 
           <Content
             className="Conatiner"
             style={{
@@ -131,7 +165,7 @@ const App = () => {
                     <div className="percent">
                       <span className="green">37.8%</span> this month
                     </div>
-                    
+ 
                   </div>
                 </Card>
               </Col>
@@ -203,6 +237,7 @@ const App = () => {
             </Row>
           </Content>
         </Layout>
+ 
       </Layout>
     </Layout>
   );
